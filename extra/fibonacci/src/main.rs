@@ -1,6 +1,6 @@
 fn main() {
     println!("fibonacci_iter: {}", fibonacci_iter(5));
-    println!("fibonacci_iter: {}", fibonacci_iter(1));
+    println!("fibonacci_iter: {}", fibonacci_iter(5));
     println!("fibonacci_rec: {}", fibonacci_rec(5));
     println!("fibonacci_rec_match_1: {}", fibonacci_rec_match_1(5));
     println!("fibonacci_rec_match_2: {}", fibonacci_rec_match_2(5));
@@ -14,7 +14,6 @@ fn fibonacci_rec_match_2(n: u64) -> u64 {
     }
 }
 
-
 fn fibonacci_rec_match_1(n: u64) -> u64 {
     match n {
         0 | 1 => n,
@@ -23,10 +22,7 @@ fn fibonacci_rec_match_1(n: u64) -> u64 {
 }
 
 fn fibonacci_rec(n: u64) -> u64 {
-    if n == 0 || n == 1{
-        return n;
-    }
-    fibonacci_rec(n - 1) + fibonacci_rec(n - 2)
+    if n == 0 || n == 1 {n} else {fibonacci_rec(n - 1) + fibonacci_rec(n - 2)}
 }
 
 fn fibonacci_iter(n: u64) -> u64 {
