@@ -1,5 +1,5 @@
 [package]
-name = "tic_tac_toe"
+name = "returning_ownership_of_parameters"
 version = "0.1.0"
 authors = ["John McLoughlin <john.mcloughlin.03@gmail.com>"]
 edition = "2018"
