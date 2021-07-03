@@ -1,5 +1,5 @@
 [package]
-name = "C08_E01"
+name = "c08_e01"
 version = "0.1.0"
 authors = ["John McLoughlin <john.mcloughlin.03@gmail.com>"]
 edition = "2018"
