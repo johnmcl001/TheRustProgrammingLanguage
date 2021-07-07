@@ -3,6 +3,9 @@ fn main() {
     let vec = vec![6, 7, 2, 3, 2, 1];
     println!("Before: {:?}", vec);
     println!("After: {:?}", merge_sort_vec(vec));
+    let vec = vec![6, 7, 2, 3, 2, 1];
+    println!("Before: {:?}", vec);
+    println!("After: {:?}", quick_sort_vec(vec));
 }
 
 fn merge_sort_vec(vec: Vec<i32>) -> Vec<i32> {
@@ -26,3 +29,22 @@ fn merge_sort_vec(vec: Vec<i32>) -> Vec<i32> {
 
     sorted_vec
 } 
+
+fn quick_sort_vec(vec: Vec<i32>) -> Vec<i32> {
+    if vec.len() <= 1 {
+        return vec
+    }
+
+    let pivot = vec[0];
+
+    let mut less_than_pivot: Vec<i32> = quick_sort_vec(vec[..].to_vec().into_iter().filter(|&x| x < pivot).collect()); 
+    let mut equal_to_pivot: Vec<i32> = vec[..].to_vec().into_iter().filter(|&x| x == pivot).collect(); 
+    let mut greater_than_pivot: Vec<i32> = quick_sort_vec(vec[..].to_vec().into_iter().filter(|&x| x > pivot).collect()); 
+
+    let mut result: Vec<i32> = Vec::new();
+    result.append(&mut less_than_pivot);
+    result.append(&mut equal_to_pivot);
+    result.append(&mut greater_than_pivot);
+
+    result
+}
