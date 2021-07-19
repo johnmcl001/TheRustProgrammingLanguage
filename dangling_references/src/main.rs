@@ -1,6 +1,6 @@
 fn main() {
     // let reference_to_nothing = dangle();
-    let reference_to_s = no_dangle();
+    let _reference_to_s = no_dangle();
 }
 
 fn no_dangle() -> String {

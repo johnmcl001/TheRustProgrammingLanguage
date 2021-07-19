@@ -79,7 +79,7 @@ fn generate_random_values_of_a_custom_type() {
     
 fn create_random_passwords_from_set_of_alphanumeric_characters() {
     println!("Generate Passwords From Set of Alphanumeric Characters\n");
-    let mut rng = rand::thread_rng();
+    let rng = rand::thread_rng();
     let chars: String = rng.sample_iter(&Alphanumeric)
         .take(7)
         .map(char::from)

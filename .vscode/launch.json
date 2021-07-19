@@ -8,7 +8,11 @@
             "type": "lldb",
             "request": "launch",
             "name": "Debug",
-            "program": "${workspaceFolder}/<your program>",
+            "cargo": {
+                "args": [
+                    "run"
+                ]
+            },
             "args": [],
             "cwd": "${workspaceFolder}"
         }
